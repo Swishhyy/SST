@@ -11,8 +11,6 @@ namespace SST
     {
         public bool IsEnabled { get; set; } = true; 
         public bool Debug { get; set; } = false;
-        public string DiscordWebhookUrl { get; set; } = "";
-        public string ServerGuildId { get; set; } = "";
         public string AutoUpdateEnabled { get; set; } = "true";
     }
 }
