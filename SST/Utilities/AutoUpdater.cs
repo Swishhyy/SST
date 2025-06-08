@@ -1,4 +1,9 @@
-﻿using System;
+// -----------------------------------------------------------------------
+// <copyright file="AutoUpdater.cs" company="SST">
+// Copyright (c) Swishhyy. All rights reserved.
+// </copyright>
+// -----------------------------------------------------------------------
+using System;
 using System.IO;
 using System.Net.Http;
 using System.Reflection;
@@ -8,7 +13,7 @@ using Newtonsoft.Json.Linq;
 
 namespace SST.Utilities
 {
-    public static class PluginUpdater
+    public static class AutoUpdater
     {
         private const string RepoOwner = "Swishhyy";
         private const string RepoName = "SST";
@@ -40,7 +45,7 @@ namespace SST.Utilities
 
                 if (string.IsNullOrWhiteSpace(latestVersion))
                 {
-                    Log.Warn($"{LogPrefix}Could not determine latest version tag.");
+                    Log.Warning($"{LogPrefix}Could not determine latest version tag.");
                     return;
                 }
 
@@ -52,7 +57,7 @@ namespace SST.Utilities
                     return;
                 }
 
-                Log.Warn($"{LogPrefix}Update available: {latestVersion} (current: {currentVersion})");
+                Log.Warning($"{LogPrefix}Update available: {latestVersion} (current: {currentVersion})");
 
                 if (Plugin.Instance.Config.AutoUpdateEnabled.ToLower() != "true")
                 {
@@ -76,7 +81,7 @@ namespace SST.Utilities
 
                 if (string.IsNullOrEmpty(downloadUrl))
                 {
-                    Log.Warn($"{LogPrefix}Plugin .dll not found in the release assets.");
+                    Log.Warning($"{LogPrefix}Plugin .dll not found in the release assets.");
                     return;
                 }
 
