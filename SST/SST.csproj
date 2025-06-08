@@ -50,8 +50,8 @@
     <Compile Include="Utilities\EventHandler.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\LoadupMessage.cs" />
     <Compile Include="Utilities\PluginUpdater.cs" />
-    <Compile Include="Utilities\WebhookService.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ExMod.Exiled">

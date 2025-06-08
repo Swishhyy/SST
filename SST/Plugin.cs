@@ -38,13 +38,15 @@ namespace SST
                 return;
             }
             
+            // Display the startup message
+            LoadupMessage.DisplayStartupMessage();
+            
             // Initialize and register event handlers
             eventHandler = new EventHandler();
             eventHandler.RegisterEvents();
             
             // Log plugin version for debugging
             Log.Info($"Plugin version from property: {Version}");
-            Console.WriteLine($"[{Name}] Plugin version: {Version}");
             
             // Check for updates
             if (Config.AutoUpdateEnabled.ToLower() == "true")
