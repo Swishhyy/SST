@@ -47,9 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
+    <Compile Include="StatTracking\Global\GlobalDeathTrack.cs" />
+    <Compile Include="StatTracking\Global\GlobalKillTrack.cs" />
+    <Compile Include="StatTracking\Global\GlobalLifeSpanTrack.cs" />
+    <Compile Include="StatTracking\Global\GlobalWeaponUsageTrack.cs" />
     <Compile Include="Utilities\EventHandler.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\GlobalStatTracker.cs" />
     <Compile Include="Utilities\LoadupMessage.cs" />
     <Compile Include="Utilities\PluginUpdater.cs" />
   </ItemGroup>
@@ -59,6 +64,9 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Text.Json" Version="9.0.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="StatTracking\Server\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
