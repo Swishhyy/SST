@@ -8,11 +8,11 @@ namespace SST.Utilities
 {
     public class WebhookService
     {
-        // Webhook manager for discord status updates
-        // This will be a constantly updating webhook on an embed (via a discord webhook)
-        // This will show the status of the SST API, The Website, and the Discord Bot
+        // Webhook manager for the Guilds/SCP servers leaderboard
+        // This will show the top 10 players on a leaderboard in the discord server
+        // Via the webhook URL & guild ID provided in config
 
-        // Pulls the webhook URL from the config
+
 
     }
 }
